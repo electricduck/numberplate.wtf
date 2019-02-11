@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\plate.wtf.Models\plate.wtf.Models.csproj" />
+    <ProjectReference Include="..\plate.wtf.Core.Plates\plate.wtf.Core.Plates.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>
