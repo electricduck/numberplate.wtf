@@ -97,7 +97,7 @@ namespace plate.wtf.Core.Plates
                 Flag = "🇳🇱"
             };
 
-            plateReturn.Serial = plate;
+            plateReturn.Parsed = plate;
 
             return plateReturn;
         }

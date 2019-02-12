@@ -22,6 +22,12 @@ namespace plate.wtf.Controllers.ApiControllers
         {
             _plate = plate;
         }
+        
+        [Route("{plate}")]
+        public PlateApiModel Plate(string plate)
+        {
+            return Plate("any", plate);
+        }
 
         [Route("{country}/{plate}")]
         public PlateApiModel Plate(string country, string plate)

@@ -5,7 +5,7 @@ namespace plate.wtf.Models
     {
         public Country Country { get; set; }
         public PlateInfo Info { get; set; }
-        public string Serial { get; set; }
+        public string Parsed { get; set; }
         public bool Valid { get; set; }
     }
 }

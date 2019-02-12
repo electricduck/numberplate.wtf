@@ -75,7 +75,7 @@ namespace plate.wtf.Core.Plates
                 Flag = "🇬🇧"
             };
 
-            plateReturn.Serial = plate;
+            plateReturn.Parsed = plate;
 
             return plateReturn;
         }
@@ -287,7 +287,7 @@ namespace plate.wtf.Core.Plates
 
         private static PlateInfo ParseTrade2015Plate(string plate)
         {
-            Enums.PlateFormat plateFormat = Enums.PlateFormat.Gb_Current;
+            Enums.PlateFormat plateFormat = Enums.PlateFormat.Gb_Trade2015;
 
             PlateInfo returnModel = new PlateInfo
             {

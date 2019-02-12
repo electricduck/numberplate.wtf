@@ -12,7 +12,7 @@ namespace plate.wtf.Core.Plates
     public class AtPlate : IAtPlate
     {
         private static string Standard1990Regex = @"^(([A-Z]{1,2})-([A-Z0-9]{4,6}))$";
-        private static string Standard1990OfficialRegex = @"^(([A-Z]{1,2})-([0-9]{1,5}))$";
+        private static string Standard1990OfficialRegex = @"^(([A-Z]{1,2})-([0-9]{1,5}))$"; // FIX: These don't work!
 
         public Plate Parse(string plate)
         {
@@ -39,7 +39,7 @@ namespace plate.wtf.Core.Plates
                 Flag = "🇦🇹"
             };
 
-            plateReturn.Serial = plate;
+            plateReturn.Parsed = plate;
 
             return plateReturn;
         }
