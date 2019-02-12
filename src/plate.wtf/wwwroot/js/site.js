@@ -56,23 +56,7 @@ function renderNoMatches()
     document.getElementById("resultItems").innerHTML = `<div class="no-results-header">No matches found</div>
 <div class="no-results-text">
     The country may not be supported, or you're entering a local private/custom plate.
-</div>
-<!--<div class="no-results-text sm">
-    <div class="country-buttons">
-        <span class="button">🇦🇹 Austria*</span>
-        <span class="button">🇫🇷 France*</span>
-        <span class="button">🇩🇪 Germany</span>
-        <span class="button">🇬🇬 Guernsey</span>
-        <span class="button">🇳🇱 Netherlands*</span>
-        <span class="button">🇳🇴 Norway</span>
-        <span class="button">🇷🇺 Russia</span>
-        <span class="button">🇪🇸 Spain</span>
-        <span class="button">🇬🇧 United Kingdom</span>
-    </div>
-</div>
-<div class="no-results-text xs">
-    <strong>*</strong> Not all formats supported
-</div>-->`;
+</div>`;
 }
 
 function renderMultipleMatches(plates)
