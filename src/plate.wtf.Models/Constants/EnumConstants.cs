@@ -36,6 +36,10 @@ namespace plate.wtf.Models.Constants
             // GG
             {Enums.PlateFormat.Gg_Standard1908, "Current (1908 onwards)"},
 
+            // JP
+            {Enums.PlateFormat.Jp_Standard1962, "Current (1962 onwards)"},
+            {Enums.PlateFormat.Jp_Export1962, "Out-of-Country (1962 onwards)"},
+
             // NL
             {Enums.PlateFormat.Nl_1898, "1898 to 1951"},
             {Enums.PlateFormat.Nl_SideCode1, "Side Code 1 (1951 to 1956"},

@@ -208,7 +208,7 @@ namespace plate.wtf.Core.Plates
             var diplomaticTypeString = GetDiplomaticTypeCode(Char.Parse(diplomaticType));
             var diplomaticRankString = GetDiplomaticRankCode(Convert.ToInt32(diplomaticRank));
 
-            Enums.PlateFormat plateFormat = Enums.PlateFormat.Gb_Suffix;
+            Enums.PlateFormat plateFormat = Enums.PlateFormat.Gb_Diplomatic1979;
 
             PlateInfo returnModel = new PlateInfo
             {

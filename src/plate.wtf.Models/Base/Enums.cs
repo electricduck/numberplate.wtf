@@ -36,6 +36,10 @@ namespace plate.wtf.Models
             // GG / Guernsey
             Gg_Standard1908 = 5,
 
+            // JP / Japan
+            Jp_Standard1962 = 33,
+            Jp_Export1962 = 34,
+
             // NL / Netherlands
             Nl_1898 = 12,           // 1898 to 1951
             Nl_SideCode1 = 13,      // 1951 to 1956 (Side Code 1)

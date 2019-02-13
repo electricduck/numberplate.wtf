@@ -12,5 +12,6 @@ namespace plate.wtf.Models
         public string Region { get; set; }
         public string RegistrationYear { get; set; }
         public string Special { get; set; }
+        public string VehicleType { get; set; }
     }
 }
