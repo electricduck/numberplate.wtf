@@ -65,10 +65,10 @@ namespace plate.wtf.Core
                         var parsedDePlate = _dePlate.Parse(plate);
                         platesReturn.Add(parsedDePlate);
                         break;
-                    case "es":
-                        var parsedEsPlate = _esPlate.Parse(plate);
-                        platesReturn.Add(parsedEsPlate);
-                        break;
+                    //case "es":
+                    //    var parsedEsPlate = _esPlate.Parse(plate);
+                    //    platesReturn.Add(parsedEsPlate);
+                    //    break;
                     case "fr":
                         var parsedFrPlate = _frPlate.Parse(plate);
                         platesReturn.Add(parsedFrPlate);
@@ -90,10 +90,10 @@ namespace plate.wtf.Core
                         var parsedNlPlate = _nlPlate.Parse(plate);
                         platesReturn.Add(parsedNlPlate);
                         break;
-                    case "no":
-                        var parsedNoPlate = _noPlate.Parse(plate);
-                        platesReturn.Add(parsedNoPlate);
-                        break;
+                    //case "no":
+                    //    var parsedNoPlate = _noPlate.Parse(plate);
+                    //    platesReturn.Add(parsedNoPlate);
+                    //    break;
                     case "ru":
                         var parsedRuPlate = _ruPlate.Parse(plate);
                         platesReturn.Add(parsedRuPlate);
@@ -114,24 +114,24 @@ namespace plate.wtf.Core
 
             var parsedAtPlate = _atPlate.Parse(plate);
             var parsedDePlate = _dePlate.Parse(plate);
-            var parsedEsPlate = _esPlate.Parse(plate);
+            //var parsedEsPlate = _esPlate.Parse(plate);
             var parsedFrPlate = _frPlate.Parse(plate);
             var parsedGbPlate = _gbPlate.Parse(plate);
             var parsedGgPlate = _ggPlate.Parse(plate);
             var parsedJpPlate = _jpPlate.Parse(plate);
             var parsedNlPlate = _nlPlate.Parse(plate);
-            var parsedNoPlate = _noPlate.Parse(plate);
+            //var parsedNoPlate = _noPlate.Parse(plate);
             var parsedRuPlate = _ruPlate.Parse(plate);
 
             if(parsedAtPlate.Valid) { matchesReturn.Add(parsedAtPlate); }
             if(parsedDePlate.Valid) { matchesReturn.Add(parsedDePlate); }
-            if(parsedEsPlate.Valid) { matchesReturn.Add(parsedEsPlate); }
+            //if(parsedEsPlate.Valid) { matchesReturn.Add(parsedEsPlate); }
             if(parsedFrPlate.Valid) { matchesReturn.Add(parsedFrPlate); }
             if(parsedGbPlate.Valid) { matchesReturn.Add(parsedGbPlate); }
             if(parsedGgPlate.Valid) { matchesReturn.Add(parsedGgPlate); }
             if(parsedJpPlate.Valid) { matchesReturn.Add(parsedJpPlate); }
             if(parsedNlPlate.Valid) { matchesReturn.Add(parsedNlPlate); }
-            if(parsedNoPlate.Valid) { matchesReturn.Add(parsedNoPlate); }
+            //if(parsedNoPlate.Valid) { matchesReturn.Add(parsedNoPlate); }
             if(parsedRuPlate.Valid) { matchesReturn.Add(parsedRuPlate); }
 
             return matchesReturn;
