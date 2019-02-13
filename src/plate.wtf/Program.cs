@@ -19,7 +19,7 @@ namespace plate.wtf
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseUrls("https://0.0.0.0:5523")
+                .UseUrls("http://0.0.0.0:5523")
                 .UseStartup<Startup>();
     }
 }
