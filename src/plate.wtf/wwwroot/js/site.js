@@ -160,6 +160,7 @@ function renderPlateDetails(plate)
             {
                 case 35:
                     addDetailItem("📍", "Region", plate.info.region);
+                    info = "<strong>Region</strong> is only valid for vehicles registered between 1991 and 2004."
                     break;
                 case 36:
                     info = "Temporary plate used for vehicles imported and exported to/from Lithuania, only valid for 90 days.";
