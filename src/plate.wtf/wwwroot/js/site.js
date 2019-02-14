@@ -121,13 +121,13 @@ function renderPlateDetails(plate)
                     break;
                 case 31:
                     addDetailItem("📑", "Issue No.", plate.info.issue);
-                    info = "This is a trade plate, licensed to motor traders and vehicle testers, permitting the use of an untaxed vehicle on the public highway with certain restrictions.";
+                    info = "Licensed to motor traders and vehicle testers, permitting the use of an untaxed vehicle on the public highway with certain restrictions.";
                     break;
                 case 32:
                     addDetailItem("🏢", "Diplomatic Org.", plate.info.diplomatic.organisation);
                     addDetailItem("🗺️", "Diplomatic Type", plate.info.diplomatic.type);
                     addDetailItem("🛡️", "Diplomatic Rank", plate.info.diplomatic.rank);
-                    info = "This is a diplomatic plate, found on cars used by foreign embassies, high commissions, consulates and international organisations. The cars themselves are usually not personally owned.";
+                    info = "Found on vehicles used by foreign embassies, high commissions, consulates and international organisations. The vehicles themselves are usually not personally owned.";
                     break;
             }
             break;
@@ -146,11 +146,36 @@ function renderPlateDetails(plate)
             switch(plate.info.formatEnum)
             {
                 case 34:
-                    info = "This is an out-of-country plate, issued to Japanese citizens for internationl travel &mdash; the Japanese writing system is considered unacceptable outside of Japan, as they are not easily identifiable to local authorities."
+                    info = "Issued to Japanese citizens for internationl travel &mdash; the Japanese writing system is considered unacceptable outside of Japan, as they are not easily identifiable to local authorities."
                 case 33:
                     addDetailItem("📍", "Region", plate.info.region);
                     addDetailItem("🚘", "Vehicle Type", plate.info.vehicleType);
                     addDetailItem("🌟", "Special", plate.info.special);
+                    break;
+            }
+            break;
+
+        case "lt":
+            switch(plate.info.formatEnum)
+            {
+                case 35:
+                    addDetailItem("📍", "Region", plate.info.region);
+                    break;
+                case 36:
+                    info = "Temporary plate used for vehicles imported and exported to/from Lithuania, only valid for 90 days.";
+                    break;
+                case 37:
+                    info = "Licensed to motor traders and vehicle testers, permitting the use of an untaxed vehicle on the public highway with certain restrictions.";
+                    break;
+                case 38:
+                    addDetailItem("🏢", "Diplomatic Org.", plate.info.diplomatic.organisation);
+                    info = "Found on vehicles used by foreign embassies, high commissions, consulates and international organisations. The vehicles themselves are usually not personally owned.";
+                    break;
+                case 39:
+                    info = "Found on taxis and private-hire vehicles.";
+                    break;
+                case 40:
+                    info = "Found on vehicles used in the military for transport on public roads";
                     break;
             }
             break;

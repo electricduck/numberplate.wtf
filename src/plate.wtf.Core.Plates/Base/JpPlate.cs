@@ -18,12 +18,12 @@ namespace plate.wtf.Core.Plates
 
             if(Regex.IsMatch(plate, Standard1962Regex))
             {
-                plateReturn.Info = ParseStandardOrExport1962Regex(plate, false);
+                plateReturn.Info = ParseStandardOrExport1962Plate(plate, false);
                 plateReturn.Valid = true;
             }
             else if(Regex.IsMatch(plate, Export1962Regex))
             {
-                plateReturn.Info = ParseStandardOrExport1962Regex(plate, true);
+                plateReturn.Info = ParseStandardOrExport1962Plate(plate, true);
                 plateReturn.Valid = true;
             }
             else
@@ -44,7 +44,7 @@ namespace plate.wtf.Core.Plates
             return plateReturn;
         }
 
-        private static PlateInfo ParseStandardOrExport1962Regex(string plate, bool export)
+        private static PlateInfo ParseStandardOrExport1962Plate(string plate, bool export)
         {
             Regex regex = export ? new Regex(Export1962Regex) : new Regex(Standard1962Regex);
             Match match = regex.Match(plate);

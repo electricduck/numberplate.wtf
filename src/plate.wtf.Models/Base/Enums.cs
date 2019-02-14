@@ -40,6 +40,14 @@ namespace plate.wtf.Models
             Jp_Standard1962 = 33,
             Jp_Export1962 = 34,
 
+            // LT / Lithuania
+            Lt_Standard = 35,
+            Lt_ImportExport = 36,
+            Lt_Trade = 37,
+            Lt_Diplomatic = 38,
+            Lt_Taxi = 39,
+            Lt_Military = 40,
+
             // NL / Netherlands
             Nl_1898 = 12,           // 1898 to 1951
             Nl_SideCode1 = 13,      // 1951 to 1956 (Side Code 1)

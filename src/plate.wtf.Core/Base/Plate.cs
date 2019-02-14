@@ -14,6 +14,7 @@ namespace plate.wtf.Core
         public IGbPlate _gbPlate { get; }
         public IGgPlate _ggPlate { get; }
         public IJpPlate _jpPlate { get; }
+        public ILtPlate _ltPlate { get; }
         public INlPlate _nlPlate { get; }
         public INoPlate _noPlate { get; }
         public IRuPlate _ruPlate { get; }
@@ -27,6 +28,7 @@ namespace plate.wtf.Core
             IGbPlate gbPlate,
             IGgPlate ggPlate,
             IJpPlate jpPlate,
+            ILtPlate ltPlate,
             INlPlate nlPlate,
             INoPlate noPlate,
             IRuPlate ruPlate
@@ -39,6 +41,7 @@ namespace plate.wtf.Core
             _gbPlate = gbPlate;
             _ggPlate = ggPlate;
             _jpPlate = jpPlate;
+            _ltPlate = ltPlate;
             _nlPlate = nlPlate;
             _noPlate = noPlate;
             _ruPlate = ruPlate;
@@ -86,6 +89,10 @@ namespace plate.wtf.Core
                         var parsedJpPlate = _jpPlate.Parse(plate);
                         platesReturn.Add(parsedJpPlate);
                         break;
+                    case "lt":
+                        var parsedLtPlate = _ltPlate.Parse(plate);
+                        platesReturn.Add(parsedLtPlate);
+                        break;
                     case "nl":
                         var parsedNlPlate = _nlPlate.Parse(plate);
                         platesReturn.Add(parsedNlPlate);
@@ -119,6 +126,7 @@ namespace plate.wtf.Core
             var parsedGbPlate = _gbPlate.Parse(plate);
             var parsedGgPlate = _ggPlate.Parse(plate);
             var parsedJpPlate = _jpPlate.Parse(plate);
+            var parsedLtPlate = _ltPlate.Parse(plate);
             var parsedNlPlate = _nlPlate.Parse(plate);
             //var parsedNoPlate = _noPlate.Parse(plate);
             var parsedRuPlate = _ruPlate.Parse(plate);
@@ -130,6 +138,7 @@ namespace plate.wtf.Core
             if(parsedGbPlate.Valid) { matchesReturn.Add(parsedGbPlate); }
             if(parsedGgPlate.Valid) { matchesReturn.Add(parsedGgPlate); }
             if(parsedJpPlate.Valid) { matchesReturn.Add(parsedJpPlate); }
+            if(parsedLtPlate.Valid) { matchesReturn.Add(parsedLtPlate); }
             if(parsedNlPlate.Valid) { matchesReturn.Add(parsedNlPlate); }
             //if(parsedNoPlate.Valid) { matchesReturn.Add(parsedNoPlate); }
             if(parsedRuPlate.Valid) { matchesReturn.Add(parsedRuPlate); }

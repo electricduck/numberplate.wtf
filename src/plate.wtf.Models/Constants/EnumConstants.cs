@@ -40,6 +40,14 @@ namespace plate.wtf.Models.Constants
             {Enums.PlateFormat.Jp_Standard1962, "Current (1962 onwards)"},
             {Enums.PlateFormat.Jp_Export1962, "Out-of-Country (1962 onwards)"},
 
+            // LT
+            {Enums.PlateFormat.Lt_Standard, "Current"},
+            {Enums.PlateFormat.Lt_ImportExport, "Import/Export"},
+            {Enums.PlateFormat.Lt_Trade, "Trade"},
+            {Enums.PlateFormat.Lt_Diplomatic, "Diplomatic"},
+            {Enums.PlateFormat.Lt_Taxi, "Taxicab"},
+            {Enums.PlateFormat.Lt_Military, "Military Transport"},
+
             // NL
             {Enums.PlateFormat.Nl_1898, "1898 to 1951"},
             {Enums.PlateFormat.Nl_SideCode1, "Side Code 1 (1951 to 1956"},
