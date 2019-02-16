@@ -139,6 +139,7 @@ function renderPlateDetails(plate)
                     addDetailItem("📍", "Region", plate.info.region);
                     addDetailItem("📑", "Issue No.", plate.info.issue);
                     addDetailItem("🌟", "Special", plate.info.special);
+                    info = "Northern Ireland, although part of Great Britain, has its own plate format.";
                     break;
             }
             break;
