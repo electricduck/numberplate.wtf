@@ -57,7 +57,7 @@ namespace plate.wtf.Core.Plates
             }
             else if(special == "Q" && region == "NI")
             {
-                specialString = "Indeterminate Age /  Kit Car";
+                specialString = "Indeterminate Age / Kit Car";
             }
             else
             {
