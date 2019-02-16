@@ -12,6 +12,7 @@ namespace plate.wtf.Core
         public IEsPlate _esPlate { get; }
         public IFrPlate _frPlate { get; }
         public IGbPlate _gbPlate { get; }
+        public IGbNirPlate _gbNirPlate { get; set; }
         public IGgPlate _ggPlate { get; }
         public IJpPlate _jpPlate { get; }
         public ILtPlate _ltPlate { get; }
@@ -26,6 +27,7 @@ namespace plate.wtf.Core
             IEsPlate esPlate,
             IFrPlate frPlate,
             IGbPlate gbPlate,
+            IGbNirPlate gbNirPlate,
             IGgPlate ggPlate,
             IJpPlate jpPlate,
             ILtPlate ltPlate,
@@ -39,6 +41,7 @@ namespace plate.wtf.Core
             _esPlate = esPlate;
             _frPlate = frPlate;
             _gbPlate = gbPlate;
+            _gbNirPlate = gbNirPlate;
             _ggPlate = ggPlate;
             _jpPlate = jpPlate;
             _ltPlate = ltPlate;
@@ -56,7 +59,7 @@ namespace plate.wtf.Core
                 .ToUpper()
                 .Replace(" ", "");
 
-            if(country.Length == 2)
+            if(country.Length == 2 || country.Length == 6)
             {
                 switch(country)
                 {
@@ -80,6 +83,10 @@ namespace plate.wtf.Core
                     case "uk":
                         var parsedGbPlate = _gbPlate.Parse(plate);
                         platesReturn.Add(parsedGbPlate);
+                        break;
+                    case "gb-nir":
+                        var parsedGbNirPlate = _gbNirPlate.Parse(plate);
+                        platesReturn.Add(parsedGbNirPlate);
                         break;
                     case "gg":
                         var parsedGgPlate = _ggPlate.Parse(plate);
@@ -124,6 +131,7 @@ namespace plate.wtf.Core
             //var parsedEsPlate = _esPlate.Parse(plate);
             var parsedFrPlate = _frPlate.Parse(plate);
             var parsedGbPlate = _gbPlate.Parse(plate);
+            var parsedGbNirPlate = _gbNirPlate.Parse(plate);
             var parsedGgPlate = _ggPlate.Parse(plate);
             var parsedJpPlate = _jpPlate.Parse(plate);
             var parsedLtPlate = _ltPlate.Parse(plate);
@@ -136,6 +144,7 @@ namespace plate.wtf.Core
             //if(parsedEsPlate.Valid) { matchesReturn.Add(parsedEsPlate); }
             if(parsedFrPlate.Valid) { matchesReturn.Add(parsedFrPlate); }
             if(parsedGbPlate.Valid) { matchesReturn.Add(parsedGbPlate); }
+            if(parsedGbNirPlate.Valid) { matchesReturn.Add(parsedGbNirPlate); }
             if(parsedGgPlate.Valid) { matchesReturn.Add(parsedGgPlate); }
             if(parsedJpPlate.Valid) { matchesReturn.Add(parsedJpPlate); }
             if(parsedLtPlate.Valid) { matchesReturn.Add(parsedLtPlate); }

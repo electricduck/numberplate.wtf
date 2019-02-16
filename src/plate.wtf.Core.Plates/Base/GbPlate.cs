@@ -22,8 +22,6 @@ namespace plate.wtf.Core.Plates
         {
             Plate plateReturn = new Plate {};
 
-            plate = plate.Replace(" ", "");
-
             if(Regex.IsMatch(plate, Y1902Regex))
             {
                 plateReturn.Info = ParseY1902Plate(plate);
@@ -72,7 +70,9 @@ namespace plate.wtf.Core.Plates
             plateReturn.Country = new Country
             {
                 Code = "gb",
-                Flag = "🇬🇧"
+                Flag = "🇬🇧",
+                Letter = "GB",
+                Name = "Great Britain"
             };
 
             plateReturn.Parsed = plate;

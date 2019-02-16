@@ -33,6 +33,9 @@ namespace plate.wtf.Models.Constants
             {Enums.PlateFormat.Gb_Trade2015, "Trade (2015 onwards)"},
             {Enums.PlateFormat.Gb_Diplomatic1979, "Diplomatic (1979 onwards)"},
 
+            // GB-NIR
+            {Enums.PlateFormat.GbNir_Standard1966, "Current (1966 onwards)"},
+
             // GG
             {Enums.PlateFormat.Gg_Standard1908, "Current (1908 onwards)"},
 

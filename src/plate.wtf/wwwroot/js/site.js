@@ -132,6 +132,17 @@ function renderPlateDetails(plate)
             }
             break;
 
+        case "gb-nir":
+            switch(plate.info.formatEnum)
+            {
+                case 41:
+                    addDetailItem("📍", "Region", plate.info.region);
+                    addDetailItem("📑", "Issue No.", plate.info.issue);
+                    addDetailItem("🌟", "Special", plate.info.special);
+                    break;
+            }
+            break;
+
         case "gg":
             switch(plate.info.formatEnum)
             {
@@ -218,39 +229,10 @@ function addCountryItem(plate)
     addDetailItem(plate.country.flag, `${plate.country.letter} &bull; ${plate.country.name}`, plate.parsed)
 }
 
-function getCountryName(code)
-{
-    switch(code)
-    {
-        case "at":
-            return "Austria";
-        case "de":
-            return "Germany";
-        case "es":
-            return "Spain";
-        case "fr":
-            return "France";
-        case "gb":
-            return "United Kingdom";
-        case "gg":
-            return "Guernsey";
-        case "jp":
-            return "Japan";
-        case "nl":
-            return "Netherlands";
-        case "no":
-            return "Norway";
-        case "ru":
-            return "Russia";
-    }
-
-    return "Unknown";
-}
-
 function addMultipleMatchItem(plate)
 {
     var itemHtml = `<a href="javascript:void(0);" class="multiple-results-item" onclick="parsePlate('${plate.parsed}', '${plate.country.code}')">
-        ${plate.country.flag} ${plate.country.code}
+        ${plate.country.flag} ${plate.country.name}
 </a>`;
 
     document.getElementById("resultItems").innerHTML += itemHtml;

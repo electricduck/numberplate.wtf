@@ -33,6 +33,9 @@ namespace plate.wtf.Models
             Gb_Trade2015 = 31,      // Trade (2015 onwards)
             Gb_Diplomatic1979 = 32, // Displomatic (1979 onwards)
 
+            // GB-NIR / Northern Ireland
+            GbNir_Standard1966 = 41,
+
             // GG / Guernsey
             Gg_Standard1908 = 5,
 
