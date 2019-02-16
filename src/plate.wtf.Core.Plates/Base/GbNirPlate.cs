@@ -51,11 +51,11 @@ namespace plate.wtf.Core.Plates
             string regionString = null;
             string specialString = null;
 
-            if(special == "LT" && region == "Z")
+            if(special == "L" && region == "TZ")
             {
                 specialString = "NI-built bus, intended for TfL";
             }
-            else if(special == "QN" && region == "I")
+            else if(special == "Q" && region == "NI")
             {
                 specialString = "Indeterminate Age /  Kit Car";
             }
