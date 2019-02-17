@@ -133,7 +133,10 @@ namespace plate.wtf.Core.Plates
             {"秋", "Akita, Akita"},         {"AT", "Akita, Akita"},
             {"青森", "Aomori, Aomori"},     {"AMA", "Aomori, Aomori"},
             {"青", "Aomoro, Aomori"},       {"AM", "Aomori, Aomori"},
-            {"八戸", "Hachinohe, Aomori"},  {"AMH", "Hachinohe, Aomori"}
+            {"八戸", "Hachinohe, Aomori"},  {"AMH", "Hachinohe, Aomori"},
+
+            {"長野", "Nagano, Nagano"},     {"NNN", "Nagano, Nagano"},  {"野長", "Nagano, Nagano"},
+            {"長", "Nagano, Nagano"},       {"NN", "Nagano, Nagano"}
         };
 
         private static Dictionary<string, string> SpecialCodes = new Dictionary<string, string>()
