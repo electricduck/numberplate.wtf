@@ -36,7 +36,9 @@ namespace plate.wtf.Core.Plates
             plateReturn.Country = new Country
             {
                 Code = "at",
-                Flag = "🇦🇹"
+                Flag = "🇦🇹",
+                Letter = "A",
+                Name = "Austria"
             };
 
             plateReturn.Parsed = plate;
