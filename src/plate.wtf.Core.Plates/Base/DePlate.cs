@@ -9,8 +9,7 @@ namespace plate.wtf.Core.Plates
 {
     public class DePlate : IDePlate
     {
-        private static string Standard1956Regex = @"^(([A-Z|Ü|Ö]{1,3})-([A-Z]{1,2})\s?([0-9]{1,4}))$";
-        private static string Standard1956ElectricRegex = @"^(([A-Z|Ü|Ö]{1,3})-\s?([0-9]{1,4})([E]))$";
+        private static string Standard1956Regex = @"^(([A-Z|Ü|Ö]{1,3})-([A-Z]{1,2})([0-9]{1,4})([E|H]{0,1}))$";
         private static string Diplomatic1956Regex = @"^(([0]{1})-([0-9]{1,3})-([0-9]{1,3}))$";
     
         public Plate Parse(string plate)
@@ -20,11 +19,6 @@ namespace plate.wtf.Core.Plates
             if(Regex.IsMatch(plate, Standard1956Regex))
             {
                 plateReturn.Info = ParseStandard1956Plate(plate);
-                plateReturn.Valid = true;
-            }
-            else if(Regex.IsMatch(plate, Standard1956ElectricRegex))
-            {
-                plateReturn.Info = ParseStandard1956Plate(plate, true);
                 plateReturn.Valid = true;
             }
             else if(Regex.IsMatch(plate, Diplomatic1956Regex))
@@ -54,26 +48,16 @@ namespace plate.wtf.Core.Plates
             return plateReturn;
         }
 
-        private static PlateInfo ParseStandard1956Plate(string plate, bool electricSpecial = false)
+        private static PlateInfo ParseStandard1956Plate(string plate)
         {
-            string regionOrSpecial = null;
+            Regex regex = new Regex(Standard1956Regex);
+            Match match = regex.Match(plate);
+
+            string specialSuffix = match.Groups[5].Value;
+            string regionOrSpecial = match.Groups[2].Value;
+
             string regionString = null;
             string specialString = null;
-
-            if(!electricSpecial)
-            {
-                Regex regex = new Regex(Standard1956Regex);
-                Match match = regex.Match(plate);
-
-                regionOrSpecial = match.Groups[2].Value;
-            }
-            else
-            {
-                Regex regex = new Regex(Standard1956Regex);
-                Match match = regex.Match(plate);
-
-                regionOrSpecial = match.Groups[2].Value;
-            }
 
             Enums.PlateFormat plateFormat = Enums.PlateFormat.De_Standard1956;
 
@@ -96,8 +80,28 @@ namespace plate.wtf.Core.Plates
                 returnModel.Region = regionString;
             }
 
-            if(electricSpecial) {
-                returnModel.Special = "Electric Vehicle";
+            if(!String.IsNullOrEmpty(specialSuffix))
+            {
+                string decodedSpecialSuffix = "";
+
+                switch(specialSuffix)
+                {
+                    case "E":
+                        decodedSpecialSuffix = "Electric Vehicle";
+                        break;
+                    case "H":
+                        decodedSpecialSuffix = "Historic Vehicle";
+                        break;
+                }
+
+                if(!String.IsNullOrEmpty(returnModel.Special) && !String.IsNullOrEmpty(decodedSpecialSuffix))
+                {
+                    returnModel.Special = $"{returnModel.Special} & {decodedSpecialSuffix}";
+                }
+                else
+                {
+                    returnModel.Special = decodedSpecialSuffix;
+                }
             }
 
             return returnModel;
@@ -414,7 +418,7 @@ namespace plate.wtf.Core.Plates
             {"HG", "Bad Homburg vor der Höhe & Hochtaunuskreis, Hesse"},
             {"HGN", "Hagenow, Mecklenburg-Vorpommern"},
             {"HGW", "Hansestadt Greifswald, Mecklenburg-Vorpommern"},
-            {"HH", "Hansestadt Hamburg"},
+            {"HH", "Hansestadtm Hamburg"},
             {"HHM", "Hohenmölsen, Saxony Anhalt"},
             {"HI", "Hildesheim, Lower Saxony"},
             {"HIG", "Heiligenstadt, Thuringia"},

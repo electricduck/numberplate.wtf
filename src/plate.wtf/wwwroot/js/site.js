@@ -88,6 +88,16 @@ function renderPlateDetails(plate)
             }
             break;
 
+        case "de":
+            switch(plate.info.formatEnum)
+            {
+                case 7:
+                    addDetailItem("📍", "Region", plate.info.region);
+                    addDetailItem("🌟", "Special", plate.info.special);
+                    break;
+            }
+            break;
+
         case "fr":
             switch(plate.info.formatEnum)
             {
