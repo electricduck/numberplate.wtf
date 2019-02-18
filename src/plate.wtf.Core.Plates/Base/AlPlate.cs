@@ -131,10 +131,10 @@ namespace plate.wtf.Core.Plates
 
         private static string GetSpecialCode(string code)
         {
-            if(RegionCodes.ContainsKey(code))
+            if(SpecialCodes.ContainsKey(code))
             {
                 string decodedSpecial;
-                RegionCodes.TryGetValue(code, out decodedSpecial);
+                SpecialCodes.TryGetValue(code, out decodedSpecial);
                 return decodedSpecial;  
             }
             else
