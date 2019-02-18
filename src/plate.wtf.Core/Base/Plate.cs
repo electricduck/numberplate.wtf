@@ -7,6 +7,7 @@ namespace plate.wtf.Core
 {
     public class Plate : IPlate
     {
+        public IAlPlate _alPlate { get; }
         public IAtPlate _atPlate { get; }
         public IDePlate _dePlate { get; }
         public IEsPlate _esPlate { get; }
@@ -22,6 +23,7 @@ namespace plate.wtf.Core
 
         public Plate
         (
+            IAlPlate alPlate,
             IAtPlate atPlate,
             IDePlate dePlate,
             IEsPlate esPlate,
@@ -36,6 +38,7 @@ namespace plate.wtf.Core
             IRuPlate ruPlate
         )
         {
+            _alPlate = alPlate;
             _atPlate = atPlate;
             _dePlate = dePlate;
             _esPlate = esPlate;
@@ -63,6 +66,10 @@ namespace plate.wtf.Core
             {
                 switch(country)
                 {
+                    case "al":
+                        var parsedAlPlate = _alPlate.Parse(plate);
+                        platesReturn.Add(parsedAlPlate);
+                        break;
                     case "at":
                         var parsedAtPlate = _atPlate.Parse(plate);
                         platesReturn.Add(parsedAtPlate);
@@ -126,6 +133,7 @@ namespace plate.wtf.Core
         {
             List<Model.Plate> matchesReturn = new List<Model.Plate>();
 
+            var parsedAlPlate = _alPlate.Parse(plate);
             var parsedAtPlate = _atPlate.Parse(plate);
             var parsedDePlate = _dePlate.Parse(plate);
             //var parsedEsPlate = _esPlate.Parse(plate);
@@ -139,6 +147,7 @@ namespace plate.wtf.Core
             //var parsedNoPlate = _noPlate.Parse(plate);
             var parsedRuPlate = _ruPlate.Parse(plate);
 
+            if(parsedAlPlate.Valid) { matchesReturn.Add(parsedAlPlate); }
             if(parsedAtPlate.Valid) { matchesReturn.Add(parsedAtPlate); }
             if(parsedDePlate.Valid) { matchesReturn.Add(parsedDePlate); }
             //if(parsedEsPlate.Valid) { matchesReturn.Add(parsedEsPlate); }

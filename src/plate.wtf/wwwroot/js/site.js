@@ -78,6 +78,22 @@ function renderPlateDetails(plate)
 
     switch(plate.country.code)
     {
+        case "al":
+            switch(plate.info.formatEnum)
+            {
+                case 42:
+                    break;
+                case 43:
+                    addDetailItem("📍", "Region", plate.info.region);
+                    addDetailItem("🌟", "Special", plate.info.special);
+                    break;
+                case 44:
+                    addDetailItem("🏢", "Diplomatic Org.", plate.info.diplomatic.organisation);
+                    info = "Found on vehicles used by foreign embassies, high commissions, consulates and international organisations. The vehicles themselves are usually not personally owned.";
+                    break;
+            }
+            break;
+
         case "at":
             switch(plate.info.formatEnum)
             {

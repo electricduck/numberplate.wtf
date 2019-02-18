@@ -7,6 +7,11 @@ namespace plate.wtf.Models.Constants
     {
         public static Dictionary<Enums.PlateFormat, string> PlateFormatConstants = new Dictionary<Enums.PlateFormat, string>()
         {
+            // AL
+            {Enums.PlateFormat.Al_Standard2011, "Current (2011 onwards)"},
+            {Enums.PlateFormat.Al_Standard1993, "1993 to 2011"},
+            {Enums.PlateFormat.Al_Diplomatic2011, "Diplomatic (2011 onwards)"},
+
             // AT
             {Enums.PlateFormat.At_Standard1990, "Current (1990 onwards)"},
 
@@ -48,7 +53,7 @@ namespace plate.wtf.Models.Constants
             {Enums.PlateFormat.Lt_ImportExport, "Import/Export"},
             {Enums.PlateFormat.Lt_Trade, "Trade"},
             {Enums.PlateFormat.Lt_Diplomatic, "Diplomatic"},
-            {Enums.PlateFormat.Lt_Taxi, "Taxicab"},
+            {Enums.PlateFormat.Lt_Taxi, "Taxi"},
             {Enums.PlateFormat.Lt_Military, "Military Transport"},
 
             // NL

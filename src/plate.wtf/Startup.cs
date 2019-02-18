@@ -38,6 +38,7 @@ namespace plate.wtf
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            services.AddTransient<IAlPlate, AlPlate>();
             services.AddTransient<IAtPlate, AtPlate>();
             services.AddTransient<IDePlate, DePlate>();
             services.AddTransient<IEsPlate, EsPlate>();

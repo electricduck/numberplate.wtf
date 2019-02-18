@@ -7,6 +7,11 @@ namespace plate.wtf.Models
         {
             Unspecified = 0,
 
+            // AL / Albania
+            Al_Standard2011 = 42,
+            Al_Standard1993 = 43,
+            Al_Diplomatic2011 = 44,
+
             // AT / Austria
             At_Standard1990 = 6,
 
