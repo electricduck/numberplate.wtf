@@ -253,7 +253,7 @@ function renderPlateDetails(plate)
 
 function addCountryItem(plate)
 {
-    addDetailItem(plate.country.flag, `${plate.country.letter} &bull; ${plate.country.code} &bull; ${plate.country.name}`, plate.parsed)
+    addDetailItem(plate.country.flag, `${plate.country.letter} &bull; ${plate.country.name} (${plate.country.code})`, plate.parsed)
 }
 
 function addMultipleMatchItem(plate)
