@@ -29,7 +29,7 @@ namespace plate.wtf.Core.Plates
             {
                 Code = "gb-nir",
                 Flag = "🇬🇧",
-                Letter = "GB",
+                Letter = "NI",
                 Name = "Northern Ireland"
             };
 

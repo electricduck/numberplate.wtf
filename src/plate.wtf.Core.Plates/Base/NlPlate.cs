@@ -94,7 +94,9 @@ namespace plate.wtf.Core.Plates
             plateReturn.Country = new Country
             {
                 Code = "nl",
-                Flag = "🇳🇱"
+                Flag = "🇳🇱",
+                Letter = "NL",
+                Name = "Netherlands"
             };
 
             plateReturn.Parsed = plate;

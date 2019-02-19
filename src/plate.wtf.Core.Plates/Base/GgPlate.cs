@@ -27,7 +27,9 @@ namespace plate.wtf.Core.Plates
             plateReturn.Country = new Country
             {
                 Code = "gg",
-                Flag = "🇬🇬"
+                Flag = "🇬🇬",
+                Letter = "GBG",
+                Name = "Guernsey"
             };
 
             plateReturn.Parsed = plate;
