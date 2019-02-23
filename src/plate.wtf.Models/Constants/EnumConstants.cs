@@ -44,6 +44,9 @@ namespace plate.wtf.Models.Constants
             // GG
             {Enums.PlateFormat.Gg_Standard1908, "Current (1908 onwards)"},
 
+            // HU
+            {Enums.PlateFormat.Hu_Standard1990, "Current (1990 onwards)"},
+
             // JP
             {Enums.PlateFormat.Jp_Standard1962, "Current (1962 onwards)"},
             {Enums.PlateFormat.Jp_Export1962, "Out-of-Country (1962 onwards)"},
