@@ -24,6 +24,12 @@ namespace plate.wtf.Models.Constants
             {Enums.PlateFormat.Es_Standard1971, "1971 to 2000"},
             {Enums.PlateFormat.Es_Standard2000, "Current (2000 onwards)"},
 
+            // FI
+            {Enums.PlateFormat.Fi_Standard1960, "1960 to 1972"},
+            {Enums.PlateFormat.Fi_Standard1972, "1972 onwards"},
+            {Enums.PlateFormat.Fi_Export, "Export"},
+            {Enums.PlateFormat.Fi_Diplomatic, "Diplomatic"},
+
             // FR
             {Enums.PlateFormat.Fr_Fni, "FNI (1950 to 2009)"},
             {Enums.PlateFormat.Fr_Siv, "SIV (2009 onwards)"},
@@ -43,6 +49,9 @@ namespace plate.wtf.Models.Constants
 
             // GG
             {Enums.PlateFormat.Gg_Standard1908, "Current (1908 onwards)"},
+
+            // IT
+            {Enums.PlateFormat.It_Standard1994, "Current (1994 onwards)"},
 
             // JP
             {Enums.PlateFormat.Jp_Standard1962, "Current (1962 onwards)"},

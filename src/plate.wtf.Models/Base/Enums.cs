@@ -24,6 +24,13 @@ namespace plate.wtf.Models
             Es_Standard1971 = 2,
             Es_Standard2000 = 3,
 
+            // FI / Finland
+
+            Fi_Standard1960 = 46,
+            Fi_Standard1972 = 47,
+            Fi_Export = 48,
+            Fi_Diplomatic = 49,
+
             // FR / France
             Fr_Fni = 10,
             Fr_Siv = 11,
@@ -43,6 +50,9 @@ namespace plate.wtf.Models
 
             // GG / Guernsey
             Gg_Standard1908 = 5,
+
+            // IT / Italy
+            It_Standard1994 = 45,
 
             // JP / Japan
             Jp_Standard1962 = 33,

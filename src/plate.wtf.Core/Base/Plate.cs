@@ -11,10 +11,12 @@ namespace plate.wtf.Core
         public IAtPlate _atPlate { get; }
         public IDePlate _dePlate { get; }
         public IEsPlate _esPlate { get; }
+        public IFiPlate _fiPlate { get; }
         public IFrPlate _frPlate { get; }
         public IGbPlate _gbPlate { get; }
         public IGbNirPlate _gbNirPlate { get; set; }
         public IGgPlate _ggPlate { get; }
+        public IItPlate _itPlate { get; }
         public IJpPlate _jpPlate { get; }
         public ILtPlate _ltPlate { get; }
         public INlPlate _nlPlate { get; }
@@ -27,10 +29,12 @@ namespace plate.wtf.Core
             IAtPlate atPlate,
             IDePlate dePlate,
             IEsPlate esPlate,
+            IFiPlate fiPlate,
             IFrPlate frPlate,
             IGbPlate gbPlate,
             IGbNirPlate gbNirPlate,
             IGgPlate ggPlate,
+            IItPlate itPlate,
             IJpPlate jpPlate,
             ILtPlate ltPlate,
             INlPlate nlPlate,
@@ -42,10 +46,12 @@ namespace plate.wtf.Core
             _atPlate = atPlate;
             _dePlate = dePlate;
             _esPlate = esPlate;
+            _fiPlate = fiPlate;
             _frPlate = frPlate;
             _gbPlate = gbPlate;
             _gbNirPlate = gbNirPlate;
             _ggPlate = ggPlate;
+            _itPlate = itPlate;
             _jpPlate = jpPlate;
             _ltPlate = ltPlate;
             _nlPlate = nlPlate;
@@ -82,6 +88,10 @@ namespace plate.wtf.Core
                     //    var parsedEsPlate = _esPlate.Parse(plate);
                     //    platesReturn.Add(parsedEsPlate);
                     //    break;
+                    case "fi":
+                        var parsedFiPlate = _fiPlate.Parse(plate);
+                        platesReturn.Add(parsedFiPlate);
+                        break;
                     case "fr":
                         var parsedFrPlate = _frPlate.Parse(plate);
                         platesReturn.Add(parsedFrPlate);
@@ -98,6 +108,10 @@ namespace plate.wtf.Core
                     case "gg":
                         var parsedGgPlate = _ggPlate.Parse(plate);
                         platesReturn.Add(parsedGgPlate);
+                        break;
+                    case "it":
+                        var parsedItPlate = _itPlate.Parse(plate);
+                        platesReturn.Add(parsedItPlate);
                         break;
                     case "jp":
                         var parsedJpPlate = _jpPlate.Parse(plate);
@@ -137,10 +151,12 @@ namespace plate.wtf.Core
             var parsedAtPlate = _atPlate.Parse(plate);
             var parsedDePlate = _dePlate.Parse(plate);
             //var parsedEsPlate = _esPlate.Parse(plate);
+            var parsedFiPlate = _fiPlate.Parse(plate);
             var parsedFrPlate = _frPlate.Parse(plate);
             var parsedGbPlate = _gbPlate.Parse(plate);
             var parsedGbNirPlate = _gbNirPlate.Parse(plate);
             var parsedGgPlate = _ggPlate.Parse(plate);
+            var parsedItPlate = _itPlate.Parse(plate);
             var parsedJpPlate = _jpPlate.Parse(plate);
             var parsedLtPlate = _ltPlate.Parse(plate);
             var parsedNlPlate = _nlPlate.Parse(plate);
@@ -151,10 +167,12 @@ namespace plate.wtf.Core
             if(parsedAtPlate.Valid) { matchesReturn.Add(parsedAtPlate); }
             if(parsedDePlate.Valid) { matchesReturn.Add(parsedDePlate); }
             //if(parsedEsPlate.Valid) { matchesReturn.Add(parsedEsPlate); }
+            if(parsedFiPlate.Valid) { matchesReturn.Add(parsedFiPlate); }
             if(parsedFrPlate.Valid) { matchesReturn.Add(parsedFrPlate); }
             if(parsedGbPlate.Valid) { matchesReturn.Add(parsedGbPlate); }
             if(parsedGbNirPlate.Valid) { matchesReturn.Add(parsedGbNirPlate); }
             if(parsedGgPlate.Valid) { matchesReturn.Add(parsedGgPlate); }
+            if(parsedItPlate.Valid) { matchesReturn.Add(parsedItPlate); }
             if(parsedJpPlate.Valid) { matchesReturn.Add(parsedJpPlate); }
             if(parsedLtPlate.Valid) { matchesReturn.Add(parsedLtPlate); }
             if(parsedNlPlate.Valid) { matchesReturn.Add(parsedNlPlate); }

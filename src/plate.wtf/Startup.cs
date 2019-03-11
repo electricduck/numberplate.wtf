@@ -42,10 +42,12 @@ namespace plate.wtf
             services.AddTransient<IAtPlate, AtPlate>();
             services.AddTransient<IDePlate, DePlate>();
             services.AddTransient<IEsPlate, EsPlate>();
+            services.AddTransient<IFiPlate, FiPlate>();
             services.AddTransient<IFrPlate, FrPlate>();
             services.AddTransient<IGbPlate, GbPlate>();
             services.AddTransient<IGbNirPlate, GbNirPlate>();
             services.AddTransient<IGgPlate, GgPlate>();
+            services.AddTransient<IItPlate, ItPlate>();
             services.AddTransient<IJpPlate, JpPlate>();
             services.AddTransient<ILtPlate, LtPlate>();
             services.AddTransient<INlPlate, NlPlate>();

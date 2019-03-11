@@ -114,6 +114,26 @@ function renderPlateDetails(plate)
             }
             break;
 
+        case "fi":
+            switch(plate.info.formatEnum)
+            {
+                case 46:
+                    addDetailItem("📍", "Region", plate.info.region);
+                    addDetailItem("📑", "Issue", `${plate.info.issue} [${plate.info.series}]`);
+                    break;
+                case 47:
+                    addDetailItem("📑", "Issue", `${plate.info.issue} [${plate.info.series}]`);
+                    addDetailItem("🚘", "Vehicle Type", plate.info.vehicleType);
+                    break;
+                case 48:
+                    addDetailItem("📑", "Issue", `${plate.info.issue} [${plate.info.series}]`);
+                    info = "Temporary plate used for vehicles exported to/from Finland.";
+                    break;
+                case 49:
+                    info = "Found on vehicles used by foreign embassies, high commissions, consulates and international organisations. The vehicles themselves are usually not personally owned.";
+                    break;
+            }
+
         case "fr":
             switch(plate.info.formatEnum)
             {
@@ -176,6 +196,15 @@ function renderPlateDetails(plate)
                 case 5:
                     addDetailItem("📑", "Issue No.", plate.info.issue);
                     addDetailItem("🌟", "Special", plate.info.special);
+                    break;
+            }
+            break;
+
+        case "it":
+            switch(plate.info.formatEnum)
+            {
+                case 45:
+                    addDetailItem("📍", "Region", plate.info.region);
                     break;
             }
             break;
@@ -277,12 +306,19 @@ function addDetailItem(icon, item, content)
         {
             content = "<em>Unknown</em>";
         }
+
+        if(item == "Vehicle Type")
+        {
+            content = "<em>Unknown</em>";
+        }
     }
 
     content = content
         .toString()
         .replace("(", "<em>(")
-        .replace(")", ")</em>");
+        .replace(")", ")</em>")
+        .replace("[", "(")
+        .replace("]", ")");
 
     var itemHtml = `<div class="results-item">
     <div class="results-item-icon vertical-align">
