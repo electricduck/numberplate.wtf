@@ -119,6 +119,7 @@ namespace plate.wtf.Core
                     case "it":
                         var parsedItPlate = _itPlate.Parse(plate);
                         platesReturn.Add(parsedItPlate);
+                        break;
                     case "jp":
                         var parsedJpPlate = _jpPlate.Parse(plate);
                         platesReturn.Add(parsedJpPlate);
