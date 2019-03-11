@@ -16,6 +16,7 @@ namespace plate.wtf.Core
         public IGbPlate _gbPlate { get; }
         public IGbNirPlate _gbNirPlate { get; set; }
         public IGgPlate _ggPlate { get; }
+        public IHuPlate _huPlate { get; }
         public IItPlate _itPlate { get; }
         public IJpPlate _jpPlate { get; }
         public ILtPlate _ltPlate { get; }
@@ -34,6 +35,7 @@ namespace plate.wtf.Core
             IGbPlate gbPlate,
             IGbNirPlate gbNirPlate,
             IGgPlate ggPlate,
+            IHuPlate huPlate,
             IItPlate itPlate,
             IJpPlate jpPlate,
             ILtPlate ltPlate,
@@ -51,6 +53,7 @@ namespace plate.wtf.Core
             _gbPlate = gbPlate;
             _gbNirPlate = gbNirPlate;
             _ggPlate = ggPlate;
+            _huPlate = huPlate;
             _itPlate = itPlate;
             _jpPlate = jpPlate;
             _ltPlate = ltPlate;
@@ -109,10 +112,13 @@ namespace plate.wtf.Core
                         var parsedGgPlate = _ggPlate.Parse(plate);
                         platesReturn.Add(parsedGgPlate);
                         break;
+                    case "hu":
+                        var parsedHuPlate = _huPlate.Parse(plate);
+                        platesReturn.Add(parsedHuPlate);
+                        break;
                     case "it":
                         var parsedItPlate = _itPlate.Parse(plate);
                         platesReturn.Add(parsedItPlate);
-                        break;
                     case "jp":
                         var parsedJpPlate = _jpPlate.Parse(plate);
                         platesReturn.Add(parsedJpPlate);
@@ -156,6 +162,7 @@ namespace plate.wtf.Core
             var parsedGbPlate = _gbPlate.Parse(plate);
             var parsedGbNirPlate = _gbNirPlate.Parse(plate);
             var parsedGgPlate = _ggPlate.Parse(plate);
+            var parsedHuPlate = _huPlate.Parse(plate);
             var parsedItPlate = _itPlate.Parse(plate);
             var parsedJpPlate = _jpPlate.Parse(plate);
             var parsedLtPlate = _ltPlate.Parse(plate);
@@ -172,6 +179,7 @@ namespace plate.wtf.Core
             if(parsedGbPlate.Valid) { matchesReturn.Add(parsedGbPlate); }
             if(parsedGbNirPlate.Valid) { matchesReturn.Add(parsedGbNirPlate); }
             if(parsedGgPlate.Valid) { matchesReturn.Add(parsedGgPlate); }
+            if(parsedHuPlate.Valid) { matchesReturn.Add(parsedHuPlate); }
             if(parsedItPlate.Valid) { matchesReturn.Add(parsedItPlate); }
             if(parsedJpPlate.Valid) { matchesReturn.Add(parsedJpPlate); }
             if(parsedLtPlate.Valid) { matchesReturn.Add(parsedLtPlate); }

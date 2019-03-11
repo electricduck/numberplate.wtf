@@ -51,6 +51,9 @@ namespace plate.wtf.Models
             // GG / Guernsey
             Gg_Standard1908 = 5,
 
+            // HU / Hungary
+            Hu_Standard1990 = 50,
+
             // IT / Italy
             It_Standard1994 = 45,
 

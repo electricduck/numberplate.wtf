@@ -200,6 +200,16 @@ function renderPlateDetails(plate)
             }
             break;
 
+        case "hu":
+            switch(plate.info.formatEnum)
+            {
+                case 50:
+                    addDetailItem("📅", "Registration Year", plate.info.registrationYear);
+                    addDetailItem("🌟", "Special", plate.info.special);
+                    break;
+            }
+            break;
+
         case "it":
             switch(plate.info.formatEnum)
             {

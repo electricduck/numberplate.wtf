@@ -47,6 +47,7 @@ namespace plate.wtf
             services.AddTransient<IGbPlate, GbPlate>();
             services.AddTransient<IGbNirPlate, GbNirPlate>();
             services.AddTransient<IGgPlate, GgPlate>();
+            services.AddTransient<IHuPlate, HuPlate>();
             services.AddTransient<IItPlate, ItPlate>();
             services.AddTransient<IJpPlate, JpPlate>();
             services.AddTransient<ILtPlate, LtPlate>();

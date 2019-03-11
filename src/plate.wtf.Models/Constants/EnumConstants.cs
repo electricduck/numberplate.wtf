@@ -50,6 +50,9 @@ namespace plate.wtf.Models.Constants
             // GG
             {Enums.PlateFormat.Gg_Standard1908, "Current (1908 onwards)"},
 
+            // HU
+            {Enums.PlateFormat.Hu_Standard1990, "Current (1990 onwards)"},
+
             // IT
             {Enums.PlateFormat.It_Standard1994, "Current (1994 onwards)"},
 
