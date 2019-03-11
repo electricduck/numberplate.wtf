@@ -127,7 +127,7 @@ function renderPlateDetails(plate)
                     break;
                 case 48:
                     addDetailItem("📑", "Issue", `${plate.info.issue} [${plate.info.series}]`);
-                    info = "Temporary plate used for vehicles exported to/from Finland.";
+                    info = "Temporary plate used for vehicles exported from Finland.";
                     break;
                 case 49:
                     info = "Found on vehicles used by foreign embassies, high commissions, consulates and international organisations. The vehicles themselves are usually not personally owned.";

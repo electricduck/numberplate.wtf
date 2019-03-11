@@ -12,8 +12,8 @@ namespace plate.wtf.Core.Plates
     public class FiPlate : IFiPlate
     {
         private static string Standard1960Regex = @"^(([A-ZÄÖ]{1})([A-ZÄÖ]{2})-([0-9]{2}))$";
-        private static string Standard1972Regex = @"^(([A-ZÄÖ]{3})([-]{0,1})([0-9]{3}))$";
-        private static string ExportRegex = @"^(([A-ZÄÖ]{1})-([0-9]{4}))$";
+        private static string Standard1972Regex = @"^(([A-ZÄÖ]{2,3})([-]{0,1})([0-9]{3}))$";
+        private static string ExportRegex = @"^(([A-ZÄÖ]{1})-([0-9]{3,4}))$";
         private static string DiplomaticRegex = @"^(C([D]{0,1})([-]{0,1})([0-9A-Z]{2,5}))$";
 
         public Plate Parse(string plate)
@@ -95,7 +95,7 @@ namespace plate.wtf.Core.Plates
 
             int issueInt = Convert.ToInt32(issue);
             string seriesString = series;
-            string vehicleTypeString = Get1972VehicleType(plate[0]);
+            string vehicleTypeString = Get1972VehicleType(plate[0], series);
 
             Enums.PlateFormat plateFormat = Enums.PlateFormat.Fi_Standard1972;
 
@@ -162,16 +162,23 @@ namespace plate.wtf.Core.Plates
             }
         }
 
-        private static string Get1972VehicleType(char code)
+        private static string Get1972VehicleType(char code, string firstLetters)
         {
-            switch(code)
+            if(firstLetters.Length == 2)
             {
-                case 'D':
-                case 'P':
-                case 'W':
-                    return "Trailer";
-                default:
-                    return null;
+                return "Motorcycle";
+            }
+            else
+            {
+                switch(code)
+                {
+                    case 'D':
+                    case 'P':
+                    case 'W':
+                        return "Trailer";
+                    default:
+                        return null;
+                }
             }
         }
 
