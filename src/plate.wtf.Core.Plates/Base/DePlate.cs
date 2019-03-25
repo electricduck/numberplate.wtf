@@ -74,12 +74,19 @@ namespace plate.wtf.Core.Plates
             if(Post1956SpecialCodes.ContainsKey(regionOrSpecial))
             {
                 Post1956SpecialCodes.TryGetValue(regionOrSpecial, out specialString);
+                returnModel.Region = "Unknown";
                 returnModel.Special = specialString;
             }
             else if(Post1956LocationCodes.ContainsKey(regionOrSpecial))
             {
                 Post1956LocationCodes.TryGetValue(regionOrSpecial, out regionString);
                 returnModel.Region = regionString;
+                returnModel.Special = "Unknown";
+            }
+            else
+            {
+                returnModel.Region = "Unknown";
+                returnModel.Special = "Unknown";
             }
 
             if(!String.IsNullOrEmpty(specialSuffix))
@@ -96,7 +103,7 @@ namespace plate.wtf.Core.Plates
                         break;
                 }
 
-                if(!String.IsNullOrEmpty(returnModel.Special) && !String.IsNullOrEmpty(decodedSpecialSuffix))
+                if(returnModel.Special != "Unknown" && !String.IsNullOrEmpty(decodedSpecialSuffix))
                 {
                     returnModel.Special = $"{returnModel.Special} & {decodedSpecialSuffix}";
                 }

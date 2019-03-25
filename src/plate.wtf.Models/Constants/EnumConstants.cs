@@ -68,6 +68,10 @@ namespace plate.wtf.Models.Constants
             {Enums.PlateFormat.Lt_Taxi, "Taxi"},
             {Enums.PlateFormat.Lt_Military, "Military Transport"},
 
+            // LV
+            {Enums.PlateFormat.Lv_Standard1993, "Current (1993 onwards)"},
+            {Enums.PlateFormat.Lv_Diplomatic1993, "Diplomatic (1993 onwards)"},
+
             // NL
             {Enums.PlateFormat.Nl_1898, "1898 to 1951"},
             {Enums.PlateFormat.Nl_SideCode1, "Side Code 1 (1951 to 1956"},

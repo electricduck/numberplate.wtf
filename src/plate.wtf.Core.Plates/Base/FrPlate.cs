@@ -160,7 +160,7 @@ namespace plate.wtf.Core.Plates
 
                 return location;
             } else {
-                return "";
+                return "Unknown";
             }
         }
 

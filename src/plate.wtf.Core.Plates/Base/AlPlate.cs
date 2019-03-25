@@ -125,7 +125,7 @@ namespace plate.wtf.Core.Plates
             }
             else
             {
-                return null;
+                return "Unknown";
             }
         }
 
@@ -139,7 +139,7 @@ namespace plate.wtf.Core.Plates
             }
             else
             {
-                return null;
+                return "No";
             }
         }
 
@@ -153,7 +153,7 @@ namespace plate.wtf.Core.Plates
             }
             else
             {
-                return null;
+                return "Unknown";
             }
         }
 

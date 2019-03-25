@@ -291,7 +291,7 @@ namespace plate.wtf.Core.Plates
                     yearString = "2008";
                     break;
                 default:
-                    yearString = null;
+                    yearString = "Unknown";
                     break;
             };
 
@@ -360,7 +360,7 @@ namespace plate.wtf.Core.Plates
                     yearString = "2006";
                     break;
                 default:
-                    yearString = null;
+                    yearString = "Unknown";
                     break;
             };
 
@@ -383,8 +383,8 @@ namespace plate.wtf.Core.Plates
 
             string year = match.Groups[3].Value;
 
-            string specialString = null;
-            string yearString = null;
+            string specialString = "Unknown";
+            string yearString = "Unknown";
 
             switch(year) {
                 case "K":
@@ -428,7 +428,7 @@ namespace plate.wtf.Core.Plates
 
             string year = match.Groups[2].Value;
 
-            string yearString = null;
+            string yearString = "Unknown";
 
             switch(year) {
                 case "G":
@@ -470,7 +470,7 @@ namespace plate.wtf.Core.Plates
                     yearString = "2006-2008";
                     break;
                 default:
-                    yearString = null;
+                    yearString = "Unknown";
                     break;
             }
 
@@ -493,7 +493,7 @@ namespace plate.wtf.Core.Plates
 
             string year = match.Groups[2].Value;
 
-            string yearString = null;
+            string yearString = "Unknown";
 
             switch(year) {
                 case "D":
@@ -503,7 +503,7 @@ namespace plate.wtf.Core.Plates
                     yearString = "2011-2015";
                     break;
                 default:
-                    yearString = null;
+                    yearString = "Unknown";
                     break;
             }
 
@@ -526,14 +526,14 @@ namespace plate.wtf.Core.Plates
 
             string year = match.Groups[2].Value;
 
-            string yearString = null;
+            string yearString = "Unknown";
 
             switch(year) {
                 case "D":
                     yearString = "2015";
                     break;
                 default:
-                    yearString = null;
+                    yearString = "Unknown";
                     break;
             }
 

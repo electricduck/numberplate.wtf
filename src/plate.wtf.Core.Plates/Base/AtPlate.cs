@@ -83,13 +83,13 @@ namespace plate.wtf.Core.Plates
             }
             else
             {
-                return null;
+                return "Unknown";
             }
         }
 
         private static string GetSpecialCode(string code)
         {
-            if(RegionCodes.ContainsKey(code))
+            if(SpecialCodes.ContainsKey(code))
             {
                 string decodedSpecial;
                 SpecialCodes.TryGetValue(code, out decodedSpecial);
@@ -97,7 +97,7 @@ namespace plate.wtf.Core.Plates
             }
             else
             {
-                return null;
+                return "No";
             }
         }
 

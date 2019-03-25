@@ -468,6 +468,9 @@ namespace plate.wtf.Core.Plates
                 location = "Leeds / Sheffield, Yorkshire";
             } else if(locationMnemonic == "YV") {
                 location = "Sheffield / Leeds, Yorkshire";
+            } else {
+                location = "Unknown";
+                special = "No";
             }
 
             GbPost2001RegionCode returnModel = new GbPost2001RegionCode
@@ -522,7 +525,7 @@ namespace plate.wtf.Core.Plates
                 SuffixYearCodes.TryGetValue(code, out decodedYear);
                 return decodedYear.ToString();
             } else {
-                return null;
+                return "Unknown";
             }
         }
 
@@ -533,7 +536,7 @@ namespace plate.wtf.Core.Plates
                 PrefixYearCodes.TryGetValue(code, out decodedYear);
                 return decodedYear.ToString();
             } else {
-                return null;
+                return "Unknown";
             }
         }
 
@@ -547,7 +550,7 @@ namespace plate.wtf.Core.Plates
             }
             else
             {
-                return null;
+                return "Unknown";
             }
         }
 
@@ -569,7 +572,7 @@ namespace plate.wtf.Core.Plates
             }
             else
             {
-                decodedDiplomaticOrganisation = null;
+                decodedDiplomaticOrganisation = "Unknown";
             }
 
             return decodedDiplomaticOrganisation;
@@ -586,7 +589,7 @@ namespace plate.wtf.Core.Plates
             } else if(code >= 700 && code <= 999) {
                 decodedDiplomaticRank = "Consular / Other Non-Diplomatic staff";
             } else {
-                decodedDiplomaticRank = null;
+                decodedDiplomaticRank = "Unknown";
             }
 
             return decodedDiplomaticRank;

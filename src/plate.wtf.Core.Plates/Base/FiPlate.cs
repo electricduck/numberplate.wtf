@@ -158,7 +158,7 @@ namespace plate.wtf.Core.Plates
             }
             else
             {
-                return null;
+                return "Unknown";
             }
         }
 
@@ -166,7 +166,7 @@ namespace plate.wtf.Core.Plates
         {
             if(firstLetters.Length == 2)
             {
-                return "Motorcycle";
+                return "Motorbike";
             }
             else
             {
@@ -177,7 +177,7 @@ namespace plate.wtf.Core.Plates
                     case 'W':
                         return "Trailer";
                     default:
-                        return null;
+                        return "Unknown";
                 }
             }
         }

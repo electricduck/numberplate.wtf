@@ -46,6 +46,10 @@ namespace plate.wtf.Core.Plates
             {
                 specialString = "Bailiff of Guernsey";
             }
+            else
+            {
+                specialString = "No";
+            }
 
             Enums.PlateFormat plateFormat = Enums.PlateFormat.Gg_Standard1908;
 

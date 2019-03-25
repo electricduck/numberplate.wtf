@@ -86,7 +86,7 @@ namespace plate.wtf.Core.Plates
             }
             else
             {
-                return null;
+                return "Unknown";
             }
         }
 
@@ -100,7 +100,7 @@ namespace plate.wtf.Core.Plates
             }
             else
             {
-                return null;
+                return "No";
             }
         }
 
@@ -114,7 +114,7 @@ namespace plate.wtf.Core.Plates
             }
             else
             {
-                return null;
+                return "Unknown";
             }
         }
 
@@ -148,7 +148,7 @@ namespace plate.wtf.Core.Plates
 
         private static Dictionary<int, string> VehicleCodes = new Dictionary<int, string>()
         {
-            {0, "Motorcycle"},
+            {0, "Motorbike"},
             {1, "Trucks (2000cc or above)"},
             {2, "Buses"},
             {3, "Cars (2000cc or above)"},

@@ -62,6 +62,7 @@ namespace plate.wtf.Core.Plates
             else
             {
                 regionString = GetRegionCode(region);
+                specialString = "No";
             }
             
             Enums.PlateFormat plateFormat = Enums.PlateFormat.GbNir_Standard1966;
@@ -88,7 +89,7 @@ namespace plate.wtf.Core.Plates
             }
             else
             {
-                return null;
+                return "Unknown";
             }
         }
 

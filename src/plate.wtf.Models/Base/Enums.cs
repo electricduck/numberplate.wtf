@@ -43,7 +43,7 @@ namespace plate.wtf.Models
             Gb_Prefix = 29,         // 1982 to 2001 (Prefix)
             Gb_Current = 30,        // 2001 to 2051 (Current)
             Gb_Trade2015 = 31,      // Trade (2015 onwards)
-            Gb_Diplomatic1979 = 32, // Displomatic (1979 onwards)
+            Gb_Diplomatic1979 = 32, // Diplomatic (1979 onwards)
 
             // GB-NIR / Northern Ireland
             GbNir_Standard1966 = 41,
@@ -68,6 +68,11 @@ namespace plate.wtf.Models
             Lt_Diplomatic = 38,
             Lt_Taxi = 39,
             Lt_Military = 40,
+
+            // LV / Latvia
+
+            Lv_Standard1993 = 51,   // 1993 onwards
+            Lv_Diplomatic1993 = 52, // Diplomatic (1993 onwards)
 
             // NL / Netherlands
             Nl_1898 = 12,           // 1898 to 1951

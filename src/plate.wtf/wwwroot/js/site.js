@@ -205,7 +205,6 @@ function renderPlateDetails(plate)
             {
                 case 50:
                     addDetailItem("📅", "Registration Year", plate.info.registrationYear);
-                    addDetailItem("🌟", "Special", plate.info.special);
                     break;
             }
             break;
@@ -258,6 +257,27 @@ function renderPlateDetails(plate)
             }
             break;
 
+        case "lv":
+            switch(plate.info.formatEnum)
+            {
+                case 51:
+                    if(plate.info.series == null)
+                    {
+                        addDetailItem("📑", "Issue", `${plate.info.issue}`)
+                    }
+                    else
+                    {
+                        addDetailItem("📑", "Issue", `${plate.info.issue} [${plate.info.series}]`)
+                    }
+                    addDetailItem("🚘", "Vehicle Type", plate.info.vehicleType);
+                    addDetailItem("🌟", "Special", plate.info.special);
+                    break;
+                case 52:
+                    info = "Found on vehicles used by foreign embassies, high commissions, consulates and international organisations. The vehicles themselves are usually not personally owned.";
+                    break;
+            }
+            break;
+
         case "nl":
             switch(plate.info.formatEnum)
             {
@@ -306,29 +326,25 @@ function addMultipleMatchItem(plate)
 
 function addDetailItem(icon, item, content)
 {
-    if(content == null)
+    if(content == "No")
     {
-        if(item == "Special")
-        {
-            content = "<em>Standard</em>";
-        }
-        else
-        {
-            content = "<em>Unknown</em>";
-        }
-
-        if(item == "Vehicle Type")
-        {
-            content = "<em>Unknown</em>";
-        }
+        content = "<em>Standard</em>";
     }
 
-    content = content
-        .toString()
-        .replace("(", "<em>(")
-        .replace(")", ")</em>")
-        .replace("[", "(")
-        .replace("]", ")");
+    if(content == "Unknown")
+    {
+        content = "<em>Unknown</em>";
+    }
+
+    if(content != null)
+    {
+        content = content
+            .toString()
+            .replace("(", "<em>(")
+            .replace(")", ")</em>")
+            .replace("[", "(")
+            .replace("]", ")");
+    }
 
     var itemHtml = `<div class="results-item">
     <div class="results-item-icon vertical-align">

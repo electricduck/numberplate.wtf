@@ -52,7 +52,7 @@ namespace plate.wtf.Core.Plates
             string region = match.Groups[5].Value;
 
             string regionString = GetRegionCode(region);
-            string specialString = null;
+            string specialString = "No";
 
             if(Regex.IsMatch(plate, Standard1993PoliceRegex))
             {
@@ -71,6 +71,9 @@ namespace plate.wtf.Core.Plates
                         break;
                     case "O":
                         specialString = "Police";
+                        break;
+                    default:
+                        specialString = "Unknown Police";
                         break;
                 }
             }
@@ -98,7 +101,7 @@ namespace plate.wtf.Core.Plates
             }
             else
             {
-                return "";
+                return "Unknown";
             }
         }
 
