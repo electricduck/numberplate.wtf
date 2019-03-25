@@ -13,7 +13,7 @@ namespace plate.wtf.Core.Plates
 {
     public class LvPlate : ILvPlate
     {
-        private static string Standard1993Regex = @"^(([A-Z]{1,2})([-]{0,1})([0-9]{4}))";
+        private static string Standard1993Regex = @"^(([A-Z]{1,2})([-]{0,1})([0-9]{3,4}))";
         private static string Diplomatic1993Regex = @"^((\b(?:C|D|CD))([-]{0,1})([0-9]{4}))$";
 
         public Plate Parse(string plate)
