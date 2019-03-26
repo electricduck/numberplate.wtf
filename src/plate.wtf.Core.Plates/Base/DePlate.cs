@@ -81,12 +81,12 @@ namespace plate.wtf.Core.Plates
             {
                 Post1956LocationCodes.TryGetValue(regionOrSpecial, out regionString);
                 returnModel.Region = regionString;
-                returnModel.Special = "Unknown";
+                returnModel.Special = "No";
             }
             else
             {
                 returnModel.Region = "Unknown";
-                returnModel.Special = "Unknown";
+                returnModel.Special = "No";
             }
 
             if(!String.IsNullOrEmpty(specialSuffix))
@@ -103,7 +103,7 @@ namespace plate.wtf.Core.Plates
                         break;
                 }
 
-                if(returnModel.Special != "Unknown" && !String.IsNullOrEmpty(decodedSpecialSuffix))
+                if(returnModel.Special != "No" && !String.IsNullOrEmpty(decodedSpecialSuffix))
                 {
                     returnModel.Special = $"{returnModel.Special} & {decodedSpecialSuffix}";
                 }
