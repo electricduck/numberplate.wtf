@@ -14,7 +14,7 @@ namespace plate.wtf.Core.Plates
         private static string Y1953Regex = @"^(([0-9]{1,4})\s?([A-Z]{1,3}))$";
         private static string SuffixRegex = @"^(([A-Z]{3})\s?([0-9]{1,3})([A-Z]{1}))$";
         private static string Diplomatic1979Regex = "^(([0-9]{3})([A-Z]{1})([0-9]{3}))$";
-        private static string PrefixRegex = @"^(([A-Z]{1})([0-9]{2,3})\s?([A-Z]{1})([A-Z]{2}))$";
+        private static string PrefixRegex = @"^(([A-Z]{1})([0-9]{1,3})\s?([A-Z]{1})([A-Z]{2}))$";
         private static string CurrentRegex = @"^(([A-Z]{2,2})([0-9]{2})\s?([A-Z]{3,3}))$";
         private static string Trade2015Regex = @"^([0-9]{5})$";
 
