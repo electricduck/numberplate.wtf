@@ -54,6 +54,9 @@ namespace plate.wtf.Models
             // HU / Hungary
             Hu_Standard1990 = 50,
 
+            // IE / Republic of Ireland
+            Ie_Standard1987 = 55,
+
             // IT / Italy
             It_Standard1994 = 45,
 
@@ -91,6 +94,10 @@ namespace plate.wtf.Models
 
             // NO / Norway
             No_Standard1971 = 9,
+
+            // PL / Poland
+            Pl_Standard2000 = 53,
+            Pl_Classic2000 = 54,
 
             // RU / Russia
             Ru_Standard1993 = 4

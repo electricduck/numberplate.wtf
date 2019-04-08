@@ -53,6 +53,9 @@ namespace plate.wtf.Models.Constants
             // HU
             {Enums.PlateFormat.Hu_Standard1990, "Current (1990 onwards)"},
 
+            // IE
+            {Enums.PlateFormat.Ie_Standard1987, "Current (1987 onwards)"},
+
             // IT
             {Enums.PlateFormat.It_Standard1994, "Current (1994 onwards)"},
 
@@ -88,6 +91,10 @@ namespace plate.wtf.Models.Constants
 
             // NO
             {Enums.PlateFormat.No_Standard1971, "Current (1971 onwards)"},
+
+            // PL
+            {Enums.PlateFormat.Pl_Standard2000, "Current (2000 onwards)"},
+            {Enums.PlateFormat.Pl_Classic2000, "Classic (2000 onwards)"},
 
             // RU
             {Enums.PlateFormat.Ru_Standard1993, "Current (1993 onwards)"}

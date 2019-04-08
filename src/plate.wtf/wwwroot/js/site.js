@@ -209,6 +209,17 @@ function renderPlateDetails(plate)
             }
             break;
 
+        case "ie":
+            switch(plate.info.formatEnum)
+            {
+                case 55:
+                    addDetailItem("📍", "Region", plate.info.region);
+                    addDetailItem("📅", "Year", plate.info.registrationYear);
+                    addDetailItem("📑", "Issue No.", plate.info.issue);
+                    addDetailItem("🌟", "Special", plate.info.special);
+                    break;
+            }
+
         case "it":
             switch(plate.info.formatEnum)
             {
@@ -290,6 +301,18 @@ function renderPlateDetails(plate)
                     break;
             }
             break;
+
+        case "pl":
+            switch(plate.info.formatEnum)
+            {
+                case 53:
+                    addDetailItem("📍", "Region", plate.info.region);
+                    addDetailItem("🌟", "Special", plate.info.special);
+                    break;
+                case 54:
+                    addDetailItem("📍", "Region", plate.info.region);
+                    break;
+            }
 
         case "ru":
             switch(plate.info.formatEnum)
