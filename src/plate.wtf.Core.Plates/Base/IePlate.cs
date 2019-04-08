@@ -52,7 +52,6 @@ namespace plate.wtf.Core.Plates
             int year = Convert.ToInt32(match.Groups[2].Value);
 
             string regionString = GetRegionCode(region);
-            string specialString = "No";
             string yearString = GetYearCode(year, month);
         
             Enums.PlateFormat plateFormat = Enums.PlateFormat.Ie_Standard1987;
@@ -63,8 +62,7 @@ namespace plate.wtf.Core.Plates
                 FormatEnum = plateFormat,
                 Issue = issue,
                 Region = regionString,
-                RegistrationYear = yearString,
-                Special = specialString
+                RegistrationYear = yearString
             };
 
             return returnModel;
