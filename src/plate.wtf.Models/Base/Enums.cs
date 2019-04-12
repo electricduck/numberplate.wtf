@@ -100,7 +100,11 @@ namespace plate.wtf.Models
             Pl_Classic2000 = 54,
 
             // RU / Russia
-            Ru_Standard1993 = 4
+            Ru_Standard1993 = 4,
+
+            // SE / Sweden
+            Se_Standard1973 = 56,
+            Se_Military1906 = 57
         }
     }
 }

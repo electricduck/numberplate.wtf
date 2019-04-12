@@ -323,6 +323,18 @@ function renderPlateDetails(plate)
                     break;
             }
             break;
+
+        case "se":
+            switch(plate.info.formatEnum)
+            {
+                case 56:
+                    addDetailItem("🔧", "Inspection Period", plate.info.inspectionPeriod);
+                    addDetailItem("🌟", "Special", plate.info.special);
+                    break;
+                case 57:
+                    break;
+            }
+            break;
     }
 
     addDetailItem("🔢", "Format", plate.info.format);

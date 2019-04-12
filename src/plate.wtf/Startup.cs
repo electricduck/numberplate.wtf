@@ -58,6 +58,7 @@ namespace plate.wtf
             services.AddTransient<IPlate, Plate>();
             services.AddTransient<IRuPlate, RuPlate>();
             services.AddTransient<IPlPlate, PlPlate>();
+            services.AddTransient<ISePlate, SePlate>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

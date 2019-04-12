@@ -97,7 +97,11 @@ namespace plate.wtf.Models.Constants
             {Enums.PlateFormat.Pl_Classic2000, "Classic (2000 onwards)"},
 
             // RU
-            {Enums.PlateFormat.Ru_Standard1993, "Current (1993 onwards)"}
+            {Enums.PlateFormat.Ru_Standard1993, "Current (1993 onwards)"},
+        
+            // SE
+            {Enums.PlateFormat.Se_Standard1973, "Current (1973 onwards)"},
+            {Enums.PlateFormat.Se_Military1906, "Military Transport"}
         };
 
         public static string GetPlateFormatConstant(Enums.PlateFormat plateFormatEnum)

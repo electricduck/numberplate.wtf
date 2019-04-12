@@ -26,6 +26,7 @@ namespace plate.wtf.Core
         public INoPlate _noPlate { get; }
         public IPlPlate _plPlate { get; }
         public IRuPlate _ruPlate { get; }
+        public ISePlate _sePlate { get; }
 
         public Plate
         (
@@ -47,7 +48,8 @@ namespace plate.wtf.Core
             INlPlate nlPlate,
             INoPlate noPlate,
             IPlPlate plPlate,
-            IRuPlate ruPlate
+            IRuPlate ruPlate,
+            ISePlate sePlate
         )
         {
             _alPlate = alPlate;
@@ -69,6 +71,7 @@ namespace plate.wtf.Core
             _noPlate = noPlate;
             _plPlate = plPlate;
             _ruPlate = ruPlate;
+            _sePlate = sePlate;
         }
 
         public List<Model.Plate> ParsePlate(string plate, string country = "")
@@ -161,6 +164,10 @@ namespace plate.wtf.Core
                         var parsedRuPlate = _ruPlate.Parse(plate);
                         platesReturn.Add(parsedRuPlate);
                         break;
+                    case "se":
+                        var parsedSePlate = _sePlate.Parse(plate);
+                        platesReturn.Add(parsedSePlate);
+                        break;
                 }
             }
             else if(country == "any")
@@ -194,6 +201,7 @@ namespace plate.wtf.Core
             //var parsedNoPlate = _noPlate.Parse(plate);
             //var parsedPlPlate = _plPlate.Parse(plate);
             var parsedRuPlate = _ruPlate.Parse(plate);
+            var parsedSePlate = _sePlate.Parse(plate);
 
             if(parsedAlPlate.Valid) { matchesReturn.Add(parsedAlPlate); }
             if(parsedAtPlate.Valid) { matchesReturn.Add(parsedAtPlate); }
@@ -214,6 +222,7 @@ namespace plate.wtf.Core
             //if(parsedNoPlate.Valid) { matchesReturn.Add(parsedNoPlate); }
             //if(parsedPlPlate.Valid) { matchesReturn.Add(parsedPlPlate); }
             if(parsedRuPlate.Valid) { matchesReturn.Add(parsedRuPlate); }
+            if(parsedSePlate.Valid) { matchesReturn.Add(parsedSePlate); }
 
             return matchesReturn;
         }

@@ -100,11 +100,11 @@ namespace plate.wtf.Core.Plates
             {
                 if(month == 1)
                 {
-                    return $"20{paddedYear} (Jan-Jun)";
+                    return $"20{paddedYear} (Jan–Jun)";
                 }
                 else if(month == 2)
                 {
-                    return $"20{paddedYear} (Jul-Dec)";
+                    return $"20{paddedYear} (Jul–Dec)";
                 }
             }
 
